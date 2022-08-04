@@ -9,12 +9,10 @@ const quizSchema = new Schema({
     },
     vote: {
         type: Number,
-        required: [true, 'Pole opis jest wymagane']
+        required: [true, 'Pole opis jest wymagane'],
+        default: 0
     },
-    created: {
-        type: Date,
-        default: Date.now
-    },
+
 });
 
-module.exports = mongoose.model('Quiz', newsSchema);
+module.exports = mongoose.model('Quiz', quizSchema);
